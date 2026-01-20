@@ -155,13 +155,13 @@ const ContactPage = () => {
                   <MapPin size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
                   <p>P-130, Innovation City, Lahore, Pakistan</p>
                 </div>
-                {/* <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2">
                   <Phone size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Call us</p>
-                    <p>+923344130451</p>
+                    <a href="tel:+923180079172" className="hover:text-biomed-teal">+92318 0079172</a>
                   </div>
-                </div> */}
+                </div>
                 <div className="flex items-start gap-2">
                   <Mail size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
                   <div>
@@ -176,20 +176,13 @@ const ContactPage = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-lg font-bold text-biomed-navy mb-4">Customer Care</h3>
               <div className="space-y-3 text-sm text-gray-700">
-                {/* <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2">
                   <Phone size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Call us</p>
-                    <p>+923344130451</p>
+                    <a href="tel:+923180079172" className="hover:text-biomed-teal">+92318 0079172</a>
                   </div>
-                </div> */}
-                {/* <div className="flex items-start gap-2">
-                  <Phone size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold">Mobile</p>
-                    <p>+923344130451</p>
-                  </div>
-                </div> */}
+                </div>
                 <div className="flex items-start gap-2">
                   <Mail size={18} className="text-biomed-teal flex-shrink-0 mt-0.5" />
                   <div>

@@ -292,14 +292,14 @@ const HealthPointsPage = () => {
                 biomedinnovationpharmaceutical@gmail.com
               </a>
             </div>
-            {/* <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-biomed-teal/20 rounded-full flex items-center justify-center">
                 <Phone className="text-biomed-navy" size={24} />
               </div>
-              <a href="tel:+923344130451" className="text-lg font-semibold text-gray-900 hover:text-biomed-teal">
-                +923344130451
+              <a href="tel:+923180079172" className="text-lg font-semibold text-gray-900 hover:text-biomed-teal">
+                +92318 0079172
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

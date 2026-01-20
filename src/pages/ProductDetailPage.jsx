@@ -263,7 +263,7 @@ const ProductDetailPage = ({ addToCart }) => {
     },
     'prod-9': {
       id: 'prod-9',
-      name: 'Biomed Innovation Pharmaceuticals – VNUR MEN Once a Day Multi – Dietary Supplement',
+      name: 'VNUR MEN Once a Day Multi – Dietary Supplement',
       rating: 4.7,
       reviews: 145,
       questions: 7,
@@ -543,7 +543,7 @@ const ProductDetailPage = ({ addToCart }) => {
     },
     {
       id: 'prod-9',
-      name: 'Biomed Innovation Pharmaceuticals – VNUR MEN Once a Day Multi – Dietary Supplement',
+      name: 'VNUR MEN Once a Day Multi – Dietary Supplement',
       rating: 4.7,
       reviews: 145,
       originalPrice: 1890,
