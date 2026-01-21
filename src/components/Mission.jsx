@@ -11,8 +11,10 @@ const Mission = () => {
               OUR MISSION - WELLNESS FOR LIFE!
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Nutrifactor we aim to explore the goodness of nature with innovation. 
-              We are dedicated to play our role in building a happy & healthy community.
+
+            At Biomedinnovation, we're driven to push boundaries in healthcare innovation, crafting cutting-edge solutions that empower healthier lives. As your trusted partner in wellness, we blend science and compassion to improve lives, today and tomorrow .
+            <br/>
+            Your Healthcare Partner.
             </p>
             <button className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               LEARN MORE

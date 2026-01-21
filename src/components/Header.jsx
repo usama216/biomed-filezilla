@@ -55,27 +55,24 @@ const Header = ({ cartCount = 0, onCartClick }) => {
   const productCategories = [
     {
       name: 'Men',
-      items: ['Men\'s Multivitamin', 'Testosterone Support', 'Prostate Health', 'Energy Booster', 'Sports Nutrition']
+      items: ['Men\'s Multivitamin', 'Testosterone Support']
     },
     {
       name: 'Women',
-      items: ['Femrose 500', 'Femrose Evening Primrose Oil', 'Vitamax Women', 'Vitamom', 'Lectamor', 'Nuception']
+      items: []
     },
     {
       name: 'Multivitamins',
-      items: ['Daily Multivitamin', 'Senior Formula', 'Children\'s Multi', 'Prenatal Vitamins', 'Immune Support']
+      items: ['Daily Multivitamin']
     },
     {
       name: 'Fertility Support',
       items: ['Male Fertility', 'Female Fertility', 'Prenatal Care', 'Hormone Balance', 'Reproductive Health']
     },
+ 
     {
-      name: 'Gummies',
-      items: ['Vitamin C Gummies', 'Multivitamin Gummies', 'Hair Skin Nails', 'Kids Gummies', 'Immunity Gummies']
-    },
-    {
-      name: 'Softgels',
-      items: ['Omega-3 Fish Oil', 'Vitamin E', 'Coenzyme Q10', 'Evening Primrose', 'Vitamin D3']
+      name: 'DeAll Nurose',
+      items: []
     },
     {
       name: 'More',
@@ -222,15 +219,22 @@ const Header = ({ cartCount = 0, onCartClick }) => {
                             setIsProductsOpen(false);
                             setActiveCategory(null);
                           }}
+                          onMouseEnter={() => {
+                            if (category.items && category.items.length > 0 && category.items.some(item => item.trim() !== '')) {
+                              setActiveCategory(category.name);
+                            }
+                          }}
                         >
                           <span className="font-medium">{category.name}</span>
-                          <ChevronRight size={16} className="text-gray-400" />
+                          {category.items && category.items.length > 0 && category.items.some(item => item.trim() !== '') && (
+                            <ChevronRight size={16} className="text-gray-400" />
+                          )}
                         </Link>
                         
                         {/* Second Level Dropdown */}
-                        {activeCategory === category.name && (
+                        {activeCategory === category.name && category.items && category.items.length > 0 && category.items.some(item => item.trim() !== '') && (
                           <div className="absolute left-full top-0 bg-white border shadow-xl min-w-[250px] max-h-[400px] overflow-y-auto">
-                            {category.items.map((item, itemIdx) => (
+                            {category.items.filter(item => item.trim() !== '').map((item, itemIdx) => (
                               <Link
                                 key={itemIdx}
                                 to={`/products/${category.name.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
@@ -304,27 +308,39 @@ const Header = ({ cartCount = 0, onCartClick }) => {
                   <div className="ml-4 mt-2 space-y-2 animate-fadeIn">
                     {productCategories.map((category, idx) => (
                       <div key={idx}>
-                        <button
-                          onClick={() => setActiveCategory(activeCategory === category.name ? null : category.name)}
-                          className="w-full flex items-center justify-between py-2 text-sm hover:text-biomed-teal transition-colors"
-                        >
-                          {category.name}
-                          <ChevronDown size={14} className={`transition-transform duration-300 ${activeCategory === category.name ? 'rotate-180' : ''}`} />
-                        </button>
-                        
-                        {activeCategory === category.name && (
-                          <div className="ml-4 mt-1 space-y-1 animate-fadeIn">
-                            {category.items.map((item, itemIdx) => (
-                              <Link
-                                key={itemIdx}
-                                to={`/products/${category.name.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
-                                className="block py-2 text-sm text-gray-600 hover:text-biomed-teal transition-colors"
-                                onClick={handleMobileMenuClose}
-                              >
-                                {item}
-                              </Link>
-                            ))}
-                          </div>
+                        {category.items && category.items.length > 0 && category.items.some(item => item.trim() !== '') ? (
+                          <>
+                            <button
+                              onClick={() => setActiveCategory(activeCategory === category.name ? null : category.name)}
+                              className="w-full flex items-center justify-between py-2 text-sm hover:text-biomed-teal transition-colors"
+                            >
+                              {category.name}
+                              <ChevronDown size={14} className={`transition-transform duration-300 ${activeCategory === category.name ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {activeCategory === category.name && (
+                              <div className="ml-4 mt-1 space-y-1 animate-fadeIn">
+                                {category.items.filter(item => item.trim() !== '').map((item, itemIdx) => (
+                                  <Link
+                                    key={itemIdx}
+                                    to={`/products/${category.name.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
+                                    className="block py-2 text-sm text-gray-600 hover:text-biomed-teal transition-colors"
+                                    onClick={handleMobileMenuClose}
+                                  >
+                                    {item}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <Link
+                            to={`/products/${category.name.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
+                            className="block py-2 text-sm hover:text-biomed-teal transition-colors"
+                            onClick={handleMobileMenuClose}
+                          >
+                            {category.name}
+                          </Link>
                         )}
                       </div>
                     ))}

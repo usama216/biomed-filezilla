@@ -40,7 +40,7 @@ const HomePage = ({ addToCart }) => {
         </div>
       </section>
       
-      <HealthConcerns />
+      {/* <HealthConcerns /> */}
       <Mission />
       {/* <Science /> */}
       {/* <LatestOffers addToCart={addToCart} /> */}

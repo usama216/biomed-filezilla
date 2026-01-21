@@ -85,7 +85,7 @@ const AboutPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative md:-mt-20 z-10">
+      {/* <section className="relative md:-mt-20 z-10">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -104,7 +104,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Manufacturing Facility */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -362,8 +362,8 @@ const AboutPage = () => {
 
 
       {/* Worldwide Footprints */}
-      <section className="py-20 bg-gradient-to-br from-biomed-navy via-biomed-navy to-biomed-blue text-white relative overflow-hidden">
-        {/* Animated background elements */}
+      {/* <section className="py-20 bg-gradient-to-br from-biomed-navy via-biomed-navy to-biomed-blue text-white relative overflow-hidden">
+      
         <div className="absolute top-0 right-0 w-96 h-96 bg-biomed-teal/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         
@@ -382,7 +382,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-            {/* Stats Cards */}
+        
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-biomed-teal to-biomed-teal/80 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all">
                 <Globe className="mb-4" size={40} />
@@ -406,7 +406,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Global Map Illustration */}
+      
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 shadow-2xl">
               <div className="text-center">
                 <div className="text-9xl mb-6">🗺️</div>
@@ -431,7 +431,7 @@ const AboutPage = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-biomed-teal/10 via-blue-50/50 to-purple-50/30 relative overflow-hidden">
